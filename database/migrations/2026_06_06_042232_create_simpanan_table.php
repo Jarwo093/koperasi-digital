@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('simpanan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained();
             $table->enum('jenis_simpanan', ['pokok', 'wajib', 'sukarela']);
-            $table->decimal('nominal', 12, 2);
+            $table->decimal('nominal', 15, 2);
             $table->date('tanggal_setor');
             $table->timestamps();
         });

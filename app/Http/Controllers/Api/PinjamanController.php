@@ -117,4 +117,21 @@ class PinjamanController extends Controller
             'data' => $pinjaman_update
         ], 200);
     }
+
+    public function getDashboardStats()
+    {
+        $stats = [
+            'total_pinjaman_pending'   => Pinjaman::where('status_approval', 'pending')->count(),
+            'total_pinjaman_approved'  => Pinjaman::where('status_approval', 'approved')->count(),
+            'total_pinjaman_lunas'     => Pinjaman::where('status_approval', 'lunas')->count(),
+            'total_dana_disalurkan'    => Pinjaman::whereIn('status_approval', ['approved', 'lunas'])->sum('nominal_pinjam'),
+            'total_anggota_terdaftar'  => \App\Models\User::where('role', 'anggota')->count(),
+        ];
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Ringkasan statistik Koperasi Digital',
+            'data'    => $stats
+        ], 200);
+    }
 }

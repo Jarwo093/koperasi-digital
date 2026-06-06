@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PinjamanController;
 use App\Http\Controllers\Api\TransaksiController;
+use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\SimpananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +27,17 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user/profile', [UserController::class, 'profile']);
+    Route::put('/user/update-password', [UserController::class, 'updatePassword']);
     Route::post('/logout', [AuthController::class, 'logout']);
+
+    Route::post('/simpanan', [SimpananController::class, 'store']);
+    Route::get('/simpanan', [SimpananController::class, 'index']);
 
     Route::middleware('role:admin,pengurus')->group(function () {
         Route::put('/pinjaman/{id}/approve', [PinjamanController::class, 'approve']);
         Route::get('/admin/pinjaman', [PinjamanController::class, 'index']);
+        Route::get('/admin/dashboard', [PinjamanController::class, 'getDashboardStats']);
     });
 
     Route::middleware('role:anggota')->group(function () {
