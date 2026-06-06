@@ -5,7 +5,6 @@ Nim  : 2305
 Kelas : 6B 
 
 1. ERD Database
-
    
 2. Daftar Endpoint
 
