@@ -5,6 +5,7 @@ Nim  : 2305101034
 Kelas : 6B 
 
 1. ERD Database
+   
    a. User ke pinjaman
 
    b. Pinjaman ke cicilan
