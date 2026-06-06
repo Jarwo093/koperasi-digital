@@ -4,10 +4,10 @@ Nim  : 2305101034
 
 Kelas : 6B 
 
-1. ERD Database
+1. ERD Database & Relasi 
    
    a. User ke pinjaman
-
+   
    b. Pinjaman ke cicilan
 
    c. Cicilan ke transaksi
@@ -15,7 +15,7 @@ Kelas : 6B
    d. User ke simpanan
 
    
-3. Daftar Endpoint
+3. Daftar Endpoint API 
 
    a. Register
 
