@@ -1,12 +1,20 @@
-Nama : Adi
+Nama : Adi Rifai Widodo 
 
-Nim  : 2305
+Nim  : 2305101034
 
 Kelas : 6B 
 
 1. ERD Database
+   a. User ke pinjaman
+
+   b. Pinjaman ke cicilan
+
+   c. Cicilan ke transaksi
+
+   d. User ke simpanan
+
    
-2. Daftar Endpoint
+3. Daftar Endpoint
 
    a. Register
 
