@@ -1,5 +1,7 @@
 Nama : Adi
+
 Nim  : 2305
+
 Kelas : 6B 
 
 1. ERD Database
