@@ -21,7 +21,6 @@ Kelas : 6B
 
    b. Login
    
-   
    c. Mengajukan Pinjaman
 
    d. Melihat Data Pinjaman
