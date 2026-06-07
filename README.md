@@ -1,6 +1,6 @@
 ***Laporan UTS Praktikum Pemrograman Web Fullstack***
 
-***__koperasi-digital___***
+***__koperasi-digital__***
 
 Oleh Developer : Adi Rifai W. ( 2305101034 ) / 6B 
 
