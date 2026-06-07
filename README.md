@@ -10,7 +10,12 @@ ERD Database & Relasi
 (<img width="762" height="492" alt="ERD Database   Relasi" src="https://github.com/user-attachments/assets/c010d75e-d2be-4634-bbe6-36586f0c9aed" />
 
 
+Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi antar tabelnya:
 
+- Users ke Pinjaman (One-to-Many) Satu anggota (users) dapat melakukan banyak kali transaksi setoran uang. Foreign key user_id berada di tabel simpanan. 
+- Pinjaman ke Cicilan (One-to-Many) Satu kontrak pinjaman akan dipecah menjadi banyak tagihan cicilan bulanan sesuai tenornya. Foreign key pinjaman_id berada di tabel cicilans.
+- Cicilan ke Transaksi (One-to-Many) SSatu tagihan cicilan bisa memiliki histori pembayaran (jika dicicil sebagian atau bertahap). Foreign key cicilan_id berada di tabel transaksi.
+- Users ke Simpanan (One-to-Many) Satu anggota dapat menyetor uang simpanan berkali-kali secara historis.	user_id berada di tabel simpanan.
 
 Daftar Endpoint API 
 
