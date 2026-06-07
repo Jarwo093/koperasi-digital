@@ -71,7 +71,7 @@ Mengelola pendaftaran, sesi masuk, dan profil pengguna.
    
 (<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/664ac1bb-5d4e-4ee2-969d-6b997553e77d" />) 
 
-3. [POST] /api/pengajuanpinjaman ( Pinjaman )
+3. [POST] /api/pengajuanpinjaman ( Pengajuan )
    
 (<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/b12255ff-ec9a-4fe1-9e80-b6e86a8ca5c3" />)
 
