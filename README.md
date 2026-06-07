@@ -19,7 +19,7 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 
 Daftar Endpoint API 
 
-Sistem ini menyediakan RESTful API yang dilindungi oleh **Laravel Sanctum**. Untuk mengakses endpoint yang terproteksi (selain Guest), pastikan Anda menyertakan Header berikut pada setiap *request*:
+Sistem ini menyediakan restful API yang dilindungi oleh **Laravel Sanctum**. Untuk mengakses endpoint yang terproteksi (selain Guest), pastikan Anda menyertakan Header berikut pada setiap *request*:
 
 - `Accept: application/json`
 - `Authorization: Bearer {access_token}`
