@@ -19,6 +19,50 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 
 Daftar Endpoint API 
 
+Sistem ini menyediakan RESTful API yang dilindungi oleh **Laravel Sanctum**. Untuk mengakses endpoint yang terproteksi (selain Guest), pastikan Anda menyertakan Header berikut pada setiap *request*:
+
+- `Accept: application/json`
+- `Authorization: Bearer {access_token}`
+  
+1. Authentication (Auth)
+Mengelola pendaftaran, sesi masuk, dan profil pengguna.
+
+| Method | Endpoint | Akses / Role | Deskripsi | Parameter (Body JSON) |
+| :--- | :--- | :--- | :--- | :--- |
+| **POST** | `/api/register` | Guest | Mendaftarkan anggota baru | `name`, `email`, `password` |
+| **POST** | `/api/login` | Guest | Login dan mendapatkan Token | `email`, `password` |
+| **GET** | `/api/user` | Auth | Melihat profil user yang sedang login | *-* |
+| **POST** | `/api/logout` | Auth | Menghapus token (Logout) | *-* |
+
+2. Simpanan
+Mengelola kas masuk dari anggota (Simpanan Pokok, Wajib, Sukarela).
+
+| Method | Endpoint | Akses / Role | Deskripsi | Parameter (Body JSON) |
+| :--- | :--- | :--- | :--- | :--- |
+| **GET** | `/api/simpanan` | Anggota | Melihat histori simpanan milik sendiri | *-* |
+| **GET** | `/api/admin/simpanan`| Admin | Melihat semua data simpanan koperasi | *-* |
+| **POST** | `/api/simpanan` | Admin | Input data setoran simpanan anggota | `user_id`, `jenis_simpanan`, `nominal` |
+
+3. Pinjaman
+Mengelola pengajuan dan persetujuan kontrak pinjaman uang.
+
+| Method | Endpoint | Akses / Role | Deskripsi | Parameter (Body JSON) |
+| :--- | :--- | :--- | :--- | :--- |
+| **POST** | `/api/pinjaman` | Anggota | Mengajukan pinjaman baru | `nominal_pinjam`, `tenor_bulan`, `bunga_persen` |
+| **GET** | `/api/pinjaman` | Anggota | Melihat histori pengajuan diri sendiri | *-* |
+| **GET** | `/api/admin/pinjaman`| Admin | Melihat semua daftar pengajuan masuk | *-* |
+| **PUT** | `/api/pinjaman/{id}/approve` | Admin | Menyetujui/menolak pinjaman | `status_approval` ('approved'/'rejected') |
+
+4.Cicilan & Transaksi
+Mengelola tagihan bulanan dan rekam jejak pembayaran.
+
+| Method | Endpoint | Akses / Role | Deskripsi | Parameter (Body JSON) |
+| :--- | :--- | :--- | :--- | :--- |
+| **GET** | `/api/pinjaman/{id}/cicilan` | Anggota | Melihat daftar tagihan bulanan | *-* |
+| **POST** | `/api/transaksi/bayar`| Anggota | Membayar cicilan tagihan tertentu | `cicilan_id`, `nominal_bayar`, `metode_pembayaran` |
+| **GET** | `/api/transaksi` | Admin | Melihat histori seluruh transaksi | *-* |
+
+
 Testing & Dokumentasi API (Postman) 
 
 1. Auth
