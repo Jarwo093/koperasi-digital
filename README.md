@@ -101,3 +101,8 @@ Mengelola pendaftaran, sesi masuk, dan profil pengguna.
 
 10. [POST] /api/transaksi/bayar ( Bayar )
 (<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/dfca4a1e-5f4b-4748-b630-03f6a0b3dbfa" />)
+
+## Kendala dan Solusi 
+
+* **Kendala:** Karena aplikasi ini menggabungkan tampilan *Frontend* (Blade) dan RESTful API dalam satu *project* Laravel, sering terjadi bentrok di mana *request* API yang gagal validasi malah di-*redirect* ke halaman HTML Login, bukan mengembalikan format JSON.
+* **Solusi:** Memisahkan *middleware* secara tegas. Rute web menggunakan *middleware* `auth` (berbasis *Session*), sedangkan rute API menggunakan `auth:sanctum` (berbasis Token). Selain itu, wajib menyertakan *header* `Accept: application/json` pada setiap pengujian di Postman agar Laravel memprioritaskan respons JSON.
