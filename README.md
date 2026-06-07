@@ -5,8 +5,12 @@ koperasi-digital
 Oleh Developer : Adi Rifai W. ( 2305101034 ) / 6B 
 
 ERD Database & Relasi 
+
+
 (<img width="762" height="492" alt="ERD Database   Relasi" src="https://github.com/user-attachments/assets/c010d75e-d2be-4634-bbe6-36586f0c9aed" />
 )
+
+
 
 
 Daftar Endpoint API 
