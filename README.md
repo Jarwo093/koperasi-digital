@@ -6,13 +6,6 @@ Kelas : 6B
 
 1. ERD Database & Relasi 
    
-   a. User ke pinjaman
-   
-   b. Pinjaman ke cicilan
-
-   c. Cicilan ke transaksi
-
-   d. User ke simpanan
 
    
 3. Daftar Endpoint API 
