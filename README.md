@@ -4,11 +4,9 @@ koperasi-digital
 
 Oleh Developer : Adi Rifai W. ( 2305101034 ) / 6B 
 
-ERD Database & Relasi 
-
+**ERD Database & Relasi** 
 
 (<img width="762" height="492" alt="ERD Database   Relasi" src="https://github.com/user-attachments/assets/c010d75e-d2be-4634-bbe6-36586f0c9aed" />
-
 
 Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi antar tabelnya:
 
@@ -17,7 +15,7 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 - Cicilan ke Transaksi (One-to-Many) SSatu tagihan cicilan bisa memiliki histori pembayaran (jika dicicil sebagian atau bertahap). Foreign key cicilan_id berada di tabel transaksi.
 - Users ke Simpanan (One-to-Many) Satu anggota dapat menyetor uang simpanan berkali-kali secara historis.	user_id berada di tabel simpanan.
 
-Daftar Endpoint API 
+**Daftar Endpoint API**
 
 Sistem ini menyediakan restful API yang dilindungi oleh **Laravel Sanctum**. Untuk mengakses endpoint yang terproteksi (selain Guest), pastikan Anda menyertakan Header berikut pada setiap *request*:
 
