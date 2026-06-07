@@ -1,10 +1,10 @@
-Laporan UTS Praktikum Pemrograman Web Fullstack
+***Laporan UTS Praktikum Pemrograman Web Fullstack***
 
 koperasi-digital
 
 Oleh Developer : Adi Rifai W. ( 2305101034 ) / 6B 
 
-**ERD Database & Relasi** 
+***ERD Database & Relasi***
 
 (<img width="762" height="492" alt="ERD Database   Relasi" src="https://github.com/user-attachments/assets/c010d75e-d2be-4634-bbe6-36586f0c9aed" />
 
@@ -15,7 +15,7 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 - Cicilan ke Transaksi (One-to-Many) SSatu tagihan cicilan bisa memiliki histori pembayaran (jika dicicil sebagian atau bertahap). Foreign key cicilan_id berada di tabel transaksi.
 - Users ke Simpanan (One-to-Many) Satu anggota dapat menyetor uang simpanan berkali-kali secara historis.	user_id berada di tabel simpanan.
 
-**Daftar Endpoint API**
+***Daftar Endpoint API***
 
 Sistem ini menyediakan restful API yang dilindungi oleh **Laravel Sanctum**. Untuk mengakses endpoint yang terproteksi (selain Guest), pastikan Anda menyertakan Header berikut pada setiap *request*:
 
@@ -51,7 +51,7 @@ Mengelola pengajuan dan persetujuan kontrak pinjaman uang.
 | **GET** | `/api/admin/pinjaman`| Admin | Melihat semua daftar pengajuan masuk | *-* |
 | **PUT** | `/api/pinjaman/{id}/approve` | Admin | Menyetujui/menolak pinjaman | `status_approval` ('approved'/'rejected') |
 
-4.Cicilan & Transaksi
+4. Cicilan & Transaksi
 Mengelola tagihan bulanan dan rekam jejak pembayaran.
 
 | Method | Endpoint | Akses / Role | Deskripsi | Parameter (Body JSON) |
@@ -61,10 +61,18 @@ Mengelola tagihan bulanan dan rekam jejak pembayaran.
 | **GET** | `/api/transaksi` | Admin | Melihat histori seluruh transaksi | *-* |
 
 
-Testing & Dokumentasi API (Postman) 
+***Testing & Dokumentasi API (Postman)***
 
 1. Auth
-   - [POST] /api/register
+   - [POST] /api/register ( Register ) 
      
-(<img width="960" height="504" alt="image" src="https://github.com/user-attachments/assets/739a60e3-879b-4bcf-a06d-49e42ca7c455" />
-)
+(<img width="960" height="504" alt="image" src="https://github.com/user-attachments/assets/739a60e3-879b-4bcf-a06d-49e42ca7c455" />)
+
+    -[POST] /api/login ( Login ) 
+(<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/664ac1bb-5d4e-4ee2-969d-6b997553e77d" />) 
+
+    - [POST] /api/pengajuanpinjaman ( Pinjaman )
+(<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/b12255ff-ec9a-4fe1-9e80-b6e86a8ca5c3" />)
+
+    - [POST] /api/pinjaman 
+(<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/8e2be774-91ff-4d00-ab64-e62ecba3aae7" />)
